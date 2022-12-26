@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, { useState,useEffect } from "react";
 import './App.css';
+import db from "./firebase";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	const [todos,setTodos] = useState(["Macbook","Iphone"]);
+	const [checkboxColor,setCheckboxColor] = useState("#4d4d4d");
+  	
+  	const selectItem = ()=>{
+
+  	}
+
+ 	return (
+	    <div className="App">
+	      {
+	      	todos.map((todo,index)=>{
+	      		return (
+	      			<div className="todoArea">
+		      			<div className="todo">
+		      			{todo}
+		      			</div>
+		      			<div className="checkbox" onClick={selectItem}></div>
+	      			</div>
+	      			)})
+	      }
+	    </div>
+	  );
+	}
 
 export default App;
