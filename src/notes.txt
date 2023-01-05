@@ -1,2 +1,107 @@
 -There is going to be a the name of the 
   expences,the expance,the checkbox,
+
+make resolutions 
+
+
+# we are going to have 2 different collections ,but in the second one ,we are going to store additional data 
+  of the first collections items with the same index number 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+const rootCollectionRef = collection(db, 'things')
+
+const addUser = async () => {
+    const document = await addDoc(rootCollectionRef, {
+      name: newName,
+      grade: Number(newGrade),
+      role: newRole,
+      hours: Number(newHours),
+    })
+
+    const newCollectionRef = collection(db, 'things', document.id, 'name of new subcollection')
+
+    await addDoc(newCollectionRef, {
+        data: 'Hello there World',
+    })
+                         ---------------------------------------------- 
+
+
+  		 db.collection("things").doc(currentId).delete();
+  		 db.collection("items").add({
+  		    index:1,
+  		 	item:"Item"
+  		 }).then((ref)=>{
+
+  		 }).catch(err => console.log(err.massage));
+
+                        ------------------------------------------------
+
+
+
+		// Create a new, empty document in `users`
+		const usersRef = collection(db, 'users');
+		const user = awaitDoc(usersRef, {
+		  data: 'new document in users'
+		});
+
+		// Create a new document in sub-collection `general`
+		const generalRef = collection(db, `users/${user.id}/general`);
+		const general = awaitDoc(generalRef, {
+		  data: 'new document in sub-collection general'
+		});
+
+                       --------------------------------------------------
+
+
+		<div className="crossBtn" onClick={()=>{ setOpacity(0); setWidth("0vw"); }}><i class="fa fa-arrow-right"></i></div>
+    		
+
+		<div className="detailedItem">alskdj
+			<div className="crossBtn" onClick={()=>{ setOpacity(0); setWidth("0vw"); }}><i class="fa fa-arrow-right"></i></div>
+		</div>
+
+
+                       --------------------------------------------------
+
+
+
+                        db-of-Cstmrs-of-the-curr-website
+
+
+                       --------------------------------------------------
+
