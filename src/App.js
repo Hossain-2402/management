@@ -1,30 +1,19 @@
-import React, { useState,useEffect } from "react";
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+import {db} from "./firebase.js";
 import './App.css';
-import db from "./firebase";
+import Home from "./Home.js"
+import Ecommerce from "./Ecommerce.js"
 
 
 function App() {
-	const [todos,setTodos] = useState(["Macbook","Iphone"]);
-	const [checkboxColor,setCheckboxColor] = useState("#4d4d4d");
-  	
-  	const selectItem = ()=>{
-
-  	}
 
  	return (
-	    <div className="App">
-	      {
-	      	todos.map((todo,index)=>{
-	      		return (
-	      			<div className="todoArea">
-		      			<div className="todo">
-		      			{todo}
-		      			</div>
-		      			<div className="checkbox" onClick={selectItem}></div>
-	      			</div>
-	      			)})
-	      }
-	    </div>
+ 		<Router>
+           <Routes>
+                 <Route exact path='/' element={< Home />}></Route>
+                 <Route exact path='/db-of-Cstmrs-of-the-curr-website' element={< Ecommerce />}></Route>
+          </Routes>
+       </Router>
 	  );
 	}
 

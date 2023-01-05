@@ -1,0 +1,92 @@
+body{
+  background :#4d4d4d;
+  color :white;
+}
+.btn{
+	height:5vh;
+	width:4vw;
+	background:#4d4d4d;
+	text-align: center;
+	box-shadow:0 0 10px black;
+	border-radius:6px;
+	margin:2vh 0 2vh 2vw;
+	padding:2vh 0 1vh 0;
+	float:left;
+}
+.addItemBtn{
+	height:2vh;
+	max-width:100px;
+	text-align: center;
+	padding:2vh 0 2.5vh 0;
+	margin:5vh 0 5vh 0;
+	background:#4d4d4d;
+	color:white;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.thingsArea{
+}
+.item{
+	height:5vh;
+	width:80vw;
+	background:#4d4d4d;
+	box-shadow:0 0 10px black;
+	border-radius:6px;
+	margin:2vh 0 2vh 2vw;
+	padding:2vh 0 1vh 2vw;
+	float:left;
+}
+.displayBtn{
+	height:4vh;
+	width:80px;
+	padding:2vh 2vw 1vh 2vw;
+	margin:2.5vh 1vw 0 3vw;
+	text-align:center;
+	border-radius:6px;
+	background:#4d4d4d;
+	box-shadow: 0 0 10px black;
+	float:left;
+	cursor:pointer;
+}
+.displayArea{
+	position:fixed;
+	height:60vh;
+	top:20vh;
+	left:50%;
+	transform: translate(-50%,0);
+	border-radius:6px;
+	box-shadow: 0 0 60px black;
+	background:#4d4d4d;
+	color:white;
+	overflow: hidden;
+}
+.crossBtn{
+	font-family: verdana;
+	padding:5px 10px 5px 10px;
+	margin:1vh 1vw 0 0;
+	border-radius:100px;
+	background:#4d4d4d;
+	box-shadow: 0 0 10px black;
+	float:right;
+	justify-content: center;
+	text-align: center;
+	cursor:pointer;
+}
+
+@media(max-width: 991px){
+	.item{
+		width:65vw;
+	}
+	.displayArea{
+		height:50vh;
+		width:100vw;
+		margin:0 0 0 0;
+		top:0;
+		left:50%;
+		transform: translate(-50%,0);
+	}
+	.crossBtn{
+		margin:1vh 4vw 0 0;
+	}
+}
